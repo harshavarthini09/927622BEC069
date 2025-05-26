@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Video Invite</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    #videoSection {
+      text-align: center;
+      margin: 30px auto;
+      max-width: 640px;
+    }
+
+    iframe {
+      width: 100%;
+      border-radius: 8px;
+      height: 360px;
+    }
+
+    #videoMessage {
+      margin-top: 10px;
+      color: green;
+      font-weight: bold;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>You're Invited!</h2>
+
+  <div id="videoSection">
+    <iframe id="promoVideo" src="https://www.youtube.com/embed/tkjxOrIoL5I" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen 
+      onload="showVideoReady()">
+    </iframe>
+    <div id="videoMessage"></div>
+  </div>
+
+  <form id="feedbackForm">
+    <h3>Quick Feedback</h3>
+
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" rows="4" placeholder="Let us know what you think..."></textarea>
+
+    <button type="submit" onclick="formSubmitted = true;">Submit</button>
+  </form>
+
+  <script>
+    let formSubmitted = false;
+
+    function showVideoReady() {
+      document.getElementById("videoMessage").textContent = "🎥 Video ready to play!";
+    }
+
+    window.onbeforeunload = function (e) {
+      const name = document.getElementById("name").value.trim();
+      const feedback = document.getElementById("feedback").value.trim();
+
+      if (!formSubmitted && (name || feedback)) {
+        e.preventDefault();
+        e.returnValue = "You have unsaved changes. Are you sure you want to leave?";
+      }
+    };
+  </script>
+
+</body>
+</html>

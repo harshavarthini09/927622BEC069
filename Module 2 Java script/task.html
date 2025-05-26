@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Event Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .event-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+        .register-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        #events-container {
+            margin-top: 20px;
+        }
+        #category-filter, #event-search {
+            padding: 8px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+        #registration-form {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        #registration-form input, #registration-form select {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+        #loading-spinner {
+            display: none;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Community Event Portal</h1>
+    
+    <div>
+        <input type="text" id="event-search" placeholder="Search events...">
+        <select id="category-filter">
+            <option value="">All Categories</option>
+            <option value="music">Music</option>
+            <option value="volunteer">Volunteer</option>
+            <option value="shopping">Shopping</option>
+        </select>
+    </div>
+    
+    <div id="loading-spinner">Loading events...</div>
+    <div id="events-container">
+        
+    </div>
+    
+    <form id="registration-form">
+        <h2>Event Registration</h2>
+        <div>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="event">Select Event:</label>
+            <select id="event" name="event" required>
+                <option value="">-- Select an event --</option>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+
+    
+    <script>
+        
+        console.log("Welcome to the Community Portal");
+        window.addEventListener('load', () => {
+            alert("Community Portal is fully loaded!");
+        });
+
+       
+    </script>
+</body>
+</html>

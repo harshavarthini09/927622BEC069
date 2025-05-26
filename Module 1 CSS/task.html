@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+  
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="mainHeader">
+        <h1 style="color: red;">Community Event Portal</h1>
+        <p>Find and share local events in your community</p>
+    </header>
+
+    
+    <nav>
+        <ul>
+            <li><a href="#events">Upcoming Events</a></li>
+            <li><a href="#news">Community News</a></li>
+            <li><a href="#submit">Submit Event</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    
+    <main class="flex-container">
+        
+        <section id="events" class="flex-item">
+            <h2>Upcoming Events</h2>
+            
+            <div class="eventCard">
+                <h3>Community Cleanup Day</h3>
+                <p>Join us for a day of cleaning up our local parks and streets.</p>
+                <p><strong>Date:</strong> June 15, 2024</p>
+                <a href="#" class="cta-button">Learn More</a>
+            </div>
+            
+            <div class="eventCard">
+                <h3>Summer Music Festival</h3>
+                <p>Enjoy live music from local bands and food vendors.</p>
+                <p><strong>Date:</strong> July 20-22, 2024</p>
+                <a href="#" class="cta-button">Learn More</a>
+            </div>
+        </section>
+
+        
+        <section id="news" class="flex-item">
+            <h2>Community News</h2>
+            
+            <article class="news-article">
+                <h3>New Community Center Opens</h3>
+                <p>The long-awaited community center has finally opened its doors to the public. With state-of-the-art facilities including a gymnasium, swimming pool, and multipurpose rooms, the center is expected to become a hub for local activities and events.</p>
+                <p>Mayor Johnson cut the ribbon at the opening ceremony, thanking the community for their patience during the construction delays caused by the pandemic. The center will offer free programs for seniors and after-school activities for children.</p>
+            </article>
+        </section>
+    </main>
+
+    
+    <section id="admin">
+        <h2>Event Administration</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Community Cleanup</td>
+                    <td>2024-06-15</td>
+                    <td>Central Park</td>
+                    <td>Approved</td>
+                </tr>
+                <tr>
+                    <td>Summer Festival</td>
+                    <td>2024-07-20</td>
+                    <td>Downtown Square</td>
+                    <td>Approved</td>
+                </tr>
+                <tr>
+                    <td>Farmers Market</td>
+                    <td>2024-08-05</td>
+                    <td>Main Street</td>
+                    <td>Pending</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    
+    <section id="submit">
+        <h2>Submit Your Event</h2>
+        <form>
+            <div>
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" name="eventName" required>
+            </div>
+            <div>
+                <label for="eventDate">Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+            </div>
+            <div>
+                <label for="eventDescription">Description:</label>
+                <textarea id="eventDescription" name="eventDescription" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Submit Event</button>
+        </form>
+    </section>
+
+    <div class="hidden">This content is hidden but takes up space</div>
+    <div class="removed">This content is removed from layout</div>
+
+   
+    <footer>
+        <p>&copy; 2024 Local Community Event Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
